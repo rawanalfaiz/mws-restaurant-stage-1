@@ -1,3 +1,5 @@
+var staticCacheName = 'restaurants-reviews-cahce';
+
 let urlToCache = [
     '/',
     './restaurant.html',
@@ -18,7 +20,6 @@ let urlToCache = [
     './js/dbhelper.js'
 ];
 
-var staticCacheName = 'restaurants-reviews-cahce';
 
 self.addEventListener('install', function (event) {
     event.waitUntil(

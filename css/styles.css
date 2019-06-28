@@ -38,7 +38,6 @@ article, aside, canvas, details, figcaption, figure, footer, header, hgroup, men
 #maincontent {
   background-color: #f3f3f3;
   min-height: 100%;
-  /* new */
   width: 100%;
 }
 #footer {
@@ -56,7 +55,6 @@ nav {
   height: 80px;
   background-color: #252831;
   text-align:center;
-  /* new */
   display: flex;
   align-items: center;
 }
@@ -118,7 +116,6 @@ nav h1 a {
   height: 50px;
   background-color: #252831;
   align-items: center;
-  /* new */
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -149,7 +146,6 @@ nav h1 a {
   margin: 0;
   padding: 30px 15px 60px;
   text-align: center;
-  /* new */
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -199,7 +195,6 @@ nav h1 a {
   text-shadow: 0px 2px rgb(65, 64, 64);
   text-decoration: none;
   text-transform: uppercase;
-  /* new */
   text-decoration: none;
   overflow: hidden;
   cursor: pointer;
@@ -219,7 +214,6 @@ nav h1 a {
   right: 0;
   top: 130px;
   width: 50%;
-  /* new */
   margin: auto;
 }
 .inside #map {
@@ -287,23 +281,51 @@ nav h1 a {
   letter-spacing: -1px;
   padding-bottom: 1pt;
 }
+#reviews-list{
+  display: block;
+}
 #reviews-list li {
   background-color: #fff;
   border: 2px solid #f3f3f3;
-  display: block;
+  display: block !important;
   list-style-type: none;
   margin: 0 0 30px;
   overflow: hidden;
   /* padding: 0 20px 20px; */
   position: relative;
   width: 85%;
-  /* new */
-  display: flex;
-  flex-direction: row;
-  /* flex-wrap: wrap; */
 }
-#reviews-list li p {
+/* #reviews-list li p {
   margin: 0 0 10px;
+} */
+#reviewer-name, #review-date {
+  padding: 2%;
+  width: 46%;
+  height: auto;
+  margin: 0;
+  display: inline-block;
+  background-color: #444444;
+  color: #fff;
+  font-weight: 600;
+}
+#reviewer-name{
+  text-align: left;
+}
+#review-date{
+  text-align: right;
+}
+#reviewer-rating{
+  background-color: rgb(200, 81, 20);
+  color: #fff;
+  font-weight: 600;
+  WIDTH: fit-content;
+  padding: 1%;
+  margin: 3%;
+}
+#comment{
+  padding: 1%;
+  margin: 3%;
+  color: #666;
 }
 #restaurant-hours td {
   color: #666;
