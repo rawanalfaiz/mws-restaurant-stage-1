@@ -1,5 +1,3 @@
-var staticCacheName = 'restaurant-cahce-1';
-
 let urlToCache = [
     '/',
     './restaurant.html',
@@ -17,16 +15,16 @@ let urlToCache = [
     './img/10.jpg',
     './js/main.js',
     './js/restaurant_info.js',
-    './js/dbhelper.js',
-
+    './js/dbhelper.js'
 ];
-self.addEventListener('install', function (event) {
 
+var staticCacheName = 'restaurants-reviews-cahce';
+
+self.addEventListener('install', function (event) {
     event.waitUntil(
         caches.open(staticCacheName).then(function (cache) {
             console.log(cache);
             return cache.addAll(urlToCache);
-
         }).catch(erroe => {
             console.log(erroe);
         })
@@ -51,7 +49,8 @@ self.addEventListener('activate', function (event) {
 self.addEventListener('fetch', function (event) {
     event.respondWith(
         caches.match(event.request).then(function (response) {
-            return response || fetch(event.request);
+            if(response) return response;
+            return fetch(event.request);
         })
     );
 });

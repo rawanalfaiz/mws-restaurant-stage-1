@@ -200,36 +200,18 @@ addMarkersToMap = (restaurants = self.restaurants) => {
   });
 
 } 
-/* addMarkersToMap = (restaurants = self.restaurants) => {
-  restaurants.forEach(restaurant => {
-    // Add marker to the map
-    const marker = DBHelper.mapMarkerForRestaurant(restaurant, self.map);
-    google.maps.event.addListener(marker, 'click', () => {
-      window.location.href = marker.url
-    });
-    self.markers.push(marker);
-  });
-} */
-
 /**
  * Add The service worker .
  */
 
-// if ('serviceWorker' in navigator) {
-//   navigator.serviceWorker.register('service_worker.js')
-//   .then((reg) => {
-//     // registration worked
-//     if(reg.installing) {
-//       console.log('Service worker installing');
-//     } else if(reg.waiting) {
-//       console.log('Service worker installed');
-//     } else if(reg.active) {
-//       console.log('Service worker active');
-// }
-//     console.log('Registration succeeded. Scope is ' + reg.scope);
-//   }).catch((error) => {
-//     // registration failed
-//     console.log('Registration failed with ' + error);
-//   });
-// }
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('./service_worker.js')
+  .then((reg) => {
+    // registration worked
+    console.log('Registration succeeded. Scope is ' + reg.scope);
+  }).catch((error) => {
+    // registration failed
+    console.log('Registration failed with ' + error);
+  });
+}
 
